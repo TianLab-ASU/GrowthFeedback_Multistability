@@ -1,0 +1,8 @@
+p k0=4,
+p d0=0.03, kg=0.9, Jd1=1
+p n2=2, tsc=0.05
+
+
+dx/dt = k0*tsc-tsc*d0*x-x*kg/(1+((x)/Jd1)^n2),
+dGR/dt = kg/(1+(x/Jd1)^n2) - GR
+

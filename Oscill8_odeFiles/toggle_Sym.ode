@@ -1,0 +1,12 @@
+p k01=0.01, k11=2,  K1=5, d01=0.1, 
+p k02=0.01, k12=2,  K2=5, d02=0.1, 
+
+p m=2, tsc=0.1, Jd1=1, n=2, kg=0.9,
+
+x1' = k01*tsc + k11*tsc*K1^n/(x2^n+K1^n) - d01*tsc*x - kg*x1/(1+((x1+x2)/Jd1)^m),
+x2' = k02*tsc + k12*tsc*K2^n/(x1^n+K2^n) - d02*tsc*y - kg*x2/(1+((x1+x2)/Jd1)^m),
+GR' = kg/(1+((x+y)/Jd1)^n2) - GR
+
+
+
+init x=10, x2=9, GR=0
